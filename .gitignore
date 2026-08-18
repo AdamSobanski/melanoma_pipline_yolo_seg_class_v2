@@ -1,5 +1,6 @@
 models/
 test_images/
+test_image/
 __pycache__/
 *.pth
 .ipynb_checkpoints/
