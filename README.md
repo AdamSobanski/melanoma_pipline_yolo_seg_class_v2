@@ -33,13 +33,17 @@ Output: label, confidence, 4-panel visualization
 
 ## Models used
 
-| Stage | Model | Details |
-|---|---|---|
-| Detection | YOLOv8n | mAP50 = 0.977 — [`melanoma_yolo`](https://github.com/AdamSobanski/melanoma_yolo) |
-| Segmentation | U-Net (EfficientNet-B0 encoder) | Dice ≈ 0.88–0.89, trained on ISIC 2018 Task 1 — [`melanoma-segmentation`](https://github.com/AdamSobanski/melanoma-segmentation) |
-| Classification | EfficientNet-B4 (timm) | Malignant recall 93.9%, trained on ISIC 2019+2020 — [`melanoma_classification_2`](https://github.com/AdamSobanski/melanoma_classification_2) |
+| Stage | Model | Details | GitHub | Hugging Face |
+|---|---|---|---|---|
+| Detection | YOLOv8n | mAP50 = 0.977 | [`melanoma_yolo`](https://github.com/AdamSobanski/melanoma_yolo) | — |
+| Segmentation | U-Net (EfficientNet-B0 encoder) | Dice ≈ 0.88–0.89, trained on ISIC 2018 Task 1 | [`melanoma-segmentation`](https://github.com/AdamSobanski/melanoma-segmentation) | [`melanoma-segmentation`](https://huggingface.co/Ai-Adam-Six-Sigma/melanoma-segmentation) |
+| Classification | EfficientNet-B4 (timm) | Malignant recall 93.9%, trained on ISIC 2019+2020 | [`melanoma_classification_2`](https://github.com/AdamSobanski/melanoma_classification_2) | [`melanoma-efficientnet-b4`](https://huggingface.co/Ai-Adam-Six-Sigma/melanoma-efficientnet-b4), [`melanoma-classifier`](https://huggingface.co/Ai-Adam-Six-Sigma/melanoma-classifier) |
 
-Trained model weights and cards are also published on Hugging Face: [`Ai-Adam-Six-Sigma`](https://huggingface.co/Ai-Adam-Six-Sigma).
+Full Hugging Face profile with all model cards: [`Ai-Adam-Six-Sigma`](https://huggingface.co/Ai-Adam-Six-Sigma).
+
+Training/experimentation notebooks are also available on Kaggle:
+- [Melanoma Segmentation — U-Net](https://www.kaggle.com/code/adamsobaski/melanoma-segmentation-unet)
+- [Melanoma YOLO Detection](https://www.kaggle.com/code/adamsobaski/melanoma-yolo-detection)
 
 ## Requirements
 
@@ -98,11 +102,21 @@ For each processed image the pipeline produces:
 - **Confidence** — probability associated with the predicted label
 - **4-panel visualization** — detection box, cropped lesion, segmentation mask, classification result with confidence
 
-## Related repositories
+## Related repositories & resources
 
+**GitHub**
 - [`melanoma_yolo`](https://github.com/AdamSobanski/melanoma_yolo) — YOLOv8n lesion detection model
 - [`melanoma-segmentation`](https://github.com/AdamSobanski/melanoma-segmentation) — U-Net lesion segmentation model
 - [`melanoma_classification_2`](https://github.com/AdamSobanski/melanoma_classification_2) — EfficientNet-B4 malignant/benign classifier
+
+**Hugging Face** ([`Ai-Adam-Six-Sigma`](https://huggingface.co/Ai-Adam-Six-Sigma))
+- [`melanoma-segmentation`](https://huggingface.co/Ai-Adam-Six-Sigma/melanoma-segmentation)
+- [`melanoma-efficientnet-b4`](https://huggingface.co/Ai-Adam-Six-Sigma/melanoma-efficientnet-b4)
+- [`melanoma-classifier`](https://huggingface.co/Ai-Adam-Six-Sigma/melanoma-classifier)
+
+**Kaggle**
+- [Melanoma Segmentation — U-Net](https://www.kaggle.com/code/adamsobaski/melanoma-segmentation-unet)
+- [Melanoma YOLO Detection](https://www.kaggle.com/code/adamsobaski/melanoma-yolo-detection)
 
 ## Notes
 
