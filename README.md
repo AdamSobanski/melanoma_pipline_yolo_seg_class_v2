@@ -13,13 +13,10 @@ Input image
 [1] YOLOv8n            → detects the lesion, picks the bbox with the highest confidence
     │
     ▼
-[2] Crop               → crops the image to the detected bounding box
+[2] U-Net (EffNet-B0)   → segments the lesion within the crop (binary mask)
     │
     ▼
-[3] U-Net (EffNet-B0)   → segments the lesion within the crop (binary mask)
-    │
-    ▼
-[4] EfficientNet-B4     → classifies the crop as malignant / benign (sigmoid, 1 neuron)
+[3] EfficientNet-B4     → classifies the crop as malignant / benign (sigmoid, 1 neuron)
     │
     ▼
 Output: label, confidence, 4-panel visualization
